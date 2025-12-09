@@ -2,6 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.infina.finaltesting</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>infina</string>
+			</array>
+		</dict>
+	</array>
+	<key>CleverTapAccountID</key>
+	<string>accountid</string>
+	<key>CleverTapToken</key>
+	<string>passcode</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

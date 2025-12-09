@@ -6,7 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0D058A53941FB4B7B1745742 /* Pods_FinalTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0317EC77903F87BD45124B /* Pods_FinalTesting.framework */; };
+		F33190B12EAE93F8000B312E /* CleverTapSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33190B02EAE93F8000B312E /* CleverTapSDK.framework */; };
+		F33190B52EAE93FD000B312E /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33190B42EAE93FD000B312E /* SDWebImage.framework */; };
+		F33FA2122EB42EDA00CD28D2 /* CleverTapSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F33190B02EAE93F8000B312E /* CleverTapSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F33FA2132EB42EDF00CD28D2 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F33190B42EAE93FD000B312E /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F33190B32EAE93F8000B312E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F33FA2132EB42EDF00CD28D2 /* SDWebImage.framework in Embed Frameworks */,
+				F33FA2122EB42EDA00CD28D2 /* CleverTapSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		006BE8A9586DC784B6A44603 /* Pods-FinalTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalTesting.debug.xcconfig"; path = "Target Support Files/Pods-FinalTesting/Pods-FinalTesting.debug.xcconfig"; sourceTree = "<group>"; };
+		988D525FA17DB17C3F624EF5 /* Pods-FinalTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalTesting.release.xcconfig"; path = "Target Support Files/Pods-FinalTesting/Pods-FinalTesting.release.xcconfig"; sourceTree = "<group>"; };
+		BA0317EC77903F87BD45124B /* Pods_FinalTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33190B02EAE93F8000B312E /* CleverTapSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CleverTapSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33190B42EAE93FD000B312E /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36845172EAE80D9007871D9 /* FinalTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +64,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33190B12EAE93F8000B312E /* CleverTapSDK.framework in Frameworks */,
+				F33190B52EAE93FD000B312E /* SDWebImage.framework in Frameworks */,
+				0D058A53941FB4B7B1745742 /* Pods_FinalTesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		547DCBB24751534A1D534976 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F33190B42EAE93FD000B312E /* SDWebImage.framework */,
+				F33190B02EAE93F8000B312E /* CleverTapSDK.framework */,
+				BA0317EC77903F87BD45124B /* Pods_FinalTesting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69592856B7ED70C659A3DDC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				006BE8A9586DC784B6A44603 /* Pods-FinalTesting.debug.xcconfig */,
+				988D525FA17DB17C3F624EF5 /* Pods-FinalTesting.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F368450E2EAE80D9007871D9 = {
 			isa = PBXGroup;
 			children = (
 				F36845192EAE80D9007871D9 /* FinalTesting */,
 				F36845182EAE80D9007871D9 /* Products */,
+				69592856B7ED70C659A3DDC2 /* Pods */,
+				547DCBB24751534A1D534976 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +117,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F368452A2EAE80DB007871D9 /* Build configuration list for PBXNativeTarget "FinalTesting" */;
 			buildPhases = (
+				BD313AA6A2DDC951ABD6FC52 /* [CP] Check Pods Manifest.lock */,
 				F36845132EAE80D9007871D9 /* Sources */,
 				F36845142EAE80D9007871D9 /* Frameworks */,
 				F36845152EAE80D9007871D9 /* Resources */,
+				F33190B32EAE93F8000B312E /* Embed Frameworks */,
+				42024D67C658BFE07C496C67 /* [CP] Embed Pods Frameworks */,
+				4CE08339D45AD436BA88F6F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -77,8 +133,6 @@
 				F36845192EAE80D9007871D9 /* FinalTesting */,
 			);
 			name = FinalTesting;
-			packageProductDependencies = (
-			);
 			productName = FinalTesting;
 			productReference = F36845172EAE80D9007871D9 /* FinalTesting.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +181,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42024D67C658BFE07C496C67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalTesting/Pods-FinalTesting-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalTesting/Pods-FinalTesting-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalTesting/Pods-FinalTesting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CE08339D45AD436BA88F6F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalTesting/Pods-FinalTesting-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalTesting/Pods-FinalTesting-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalTesting/Pods-FinalTesting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD313AA6A2DDC951ABD6FC52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinalTesting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F36845132EAE80D9007871D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,12 +261,15 @@
 /* Begin XCBuildConfiguration section */
 		F368452B2EAE80DB007871D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 006BE8A9586DC784B6A44603 /* Pods-FinalTesting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FinalTesting/FinalTesting.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7XM67G79YA;
+				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalTesting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -158,7 +282,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.FinalTesting";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -168,12 +292,15 @@
 		};
 		F368452C2EAE80DB007871D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 988D525FA17DB17C3F624EF5 /* Pods-FinalTesting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FinalTesting/FinalTesting.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7XM67G79YA;
+				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalTesting/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -186,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.FinalTesting";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -325,7 +452,7 @@
 				F368452E2EAE80DB007871D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F368452A2EAE80DB007871D9 /* Build configuration list for PBXNativeTarget "FinalTesting" */ = {
 			isa = XCConfigurationList;
@@ -334,7 +461,7 @@
 				F368452C2EAE80DB007871D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
