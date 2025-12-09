@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     // MARK: - Singular Config
     func getSingularConfig() -> SingularConfig? {
         // Create config with API credentials
-        guard let config = SingularConfig(apiKey: "divyekant_a545dc1d", andSecret: "790a4a5262be5317a364daee905bcc38") else {
+        guard let config = SingularConfig(apiKey: "key", andSecret: "secret") else {
             return nil
         }
         
