@@ -27,8 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print("Universal Link detected — forwarding to Singular")
         
         // Your Singular API credentials
-        let apiKey = "divyekant_a545dc1d"
-        let apiSecret = "790a4a5262be5317a364daee905bcc38"
+        let apiKey = "key"
+        let apiSecret = "secret"
         
         // Restart the Singular session with the Universal Link
         Singular.startSession(
